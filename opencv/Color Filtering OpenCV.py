@@ -7,7 +7,7 @@ while(1):
     _, frame = cap.read()
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
-    lower_red = np.array([50,150,30])
+    lower_red = np.array([150,150,30])
     upper_red = np.array([255,255,180])
     
     mask = cv2.inRange(hsv, lower_red, upper_red)
